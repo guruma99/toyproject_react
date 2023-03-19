@@ -6,7 +6,7 @@ function Box(props) {
     <div>
       <div className="box">
         <h2 className="title">{props.title}</h2>
-        <img className={props.user} src="/img/rock.png" alt="바위" />
+        <img className={props.user} src={props.img} alt="바위" />
         <h2 className="result">{props.result}</h2>
       </div>
     </div>
