@@ -6,6 +6,7 @@ import Tbox from "./components/Tbox";
 
 // ⚪️ 객체는 key:value 형태로 작성한다.
 // value로 여러개의 프로퍼티를 가질 수 있다.
+
 const choice = {
   Scissors: {
     name: "Scissors",
@@ -25,24 +26,27 @@ function App() {
   const [userSelect, setUserSelect] = useState("");
   const [comSelect, setComSelect] = useState("");
   const [result, setResult] = useState(""); // "" empty 비어있는 스트리값
-  const [comResult, setComResult] = useState(""); // "" empty 비어있는 스트리값
+  const [comResult, setComResult] = useState("");
 
   const play = (userchoice) => {
+    //콘솔찍기
+    console.log(userchoice, "선택됨!");
+
     let userChoice = choice[userchoice];
     setUserSelect(userChoice);
+
     // randomChoice();
 
     //randomchoice()함수를 실행했을 때 결과값
     let computerChoice = randomChoice();
     //컴퓨터가 고른값으로 담아주기
     setComSelect(computerChoice);
-    //콘솔찍기
-    console.log(userchoice, "선택됨!");
+
     console.log(computerChoice, userChoice);
 
     //user의 승패결과
     setResult(judgement(computerChoice, userChoice));
-    //computer의 승패결과 -> user의 승패결과를 인자로 받아서 사용한다.
+    // computer의 승패결과 -> user의 승패결과를 인자로 받아서 사용한다.
     setComResult(comJudgement(judgement(computerChoice, userChoice)));
   };
 
