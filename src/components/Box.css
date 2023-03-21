@@ -3,12 +3,23 @@
   background-color: #fff;
   border-radius: 15px;
   padding: 20px;
+  margin-top: 50px;
 }
 
-.title {
+.user {
   font-weight: 800;
-  font-size: 50px;
+  font-size: 30px;
   padding-bottom: 20px;
+}
+
+.you_basic {
+  width: 300px;
+  transform: scaleY(-1) rotate(-90deg);
+}
+
+.com_basic {
+  width: 300px;
+  transform: rotate(90deg);
 }
 
 .com_img {
@@ -33,7 +44,7 @@
 
 .result {
   padding-top: 20px;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 @keyframes left-animation {

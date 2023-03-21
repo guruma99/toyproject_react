@@ -1,26 +1,26 @@
 import React from "react";
 import "./Tbox.css";
 const Tbox = (props) => {
-  // let result;
-  // if (
-  //   // props.title이 "computer"라면
-  //   // props.result "tie"가 아닐경우
-  //   // props.result가 빈 문자열이 아닌 경우
-  //   props.title === "Com" &&
-  //   props.result !== "tie" &&
-  //   props.result !== ""
-  // ) {
-  //   // result라는 변수한테 값이 "win"이면 "lose"로,
-  //   // "lose"면 "win"으로 변경한 값을 result에 할당한다.
-  //   result = props.result === "win" ? "lose" : "win";
-  // } else {
-  //   // 위의 경우가 아니라면
-  //   result = props.result;
-  // }
+  let result;
+  if (
+    // props.title이 "computer"라면
+    // props.result "tie"가 아닐경우
+    // props.result가 빈 문자열이 아닌 경우
+    props.title === "Com" &&
+    props.result !== "tie" &&
+    props.result !== ""
+  ) {
+    // result라는 변수한테 값이 "win"이면 "lose"로,
+    // "lose"면 "win"으로 변경한 값을 result에 할당한다.
+    result = props.result === "win" ? "lose" : "win";
+  } else {
+    // 위의 경우가 아니라면
+    result = props.result;
+  }
   return (
     <div className={`box ${props.className}`}>
       <h1>{props.title}</h1>
-      {/* <h2>{props.title && props.choice}</h2> */}
+      <h2>{props.choice && props.choice.name}</h2>
       {/* 해결 방법 : 조건부 렌더링 
           유저가 버튼을 클릭했을 때 useState값이 들어오고,
           값이 변경되면서 item이 img를 그려야 하는데,
@@ -33,7 +33,7 @@ const Tbox = (props) => {
           item값이 null이라면 false를 리턴하니까 
           우항이 실행되지 않는다.(렌더링X)
       */}
-      <img src={props.choice && props.img} alt="바위" />
+      <img src={props.choice && props.choice.img} />
       <h2>{props.result}</h2>
     </div>
   );

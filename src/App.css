@@ -5,21 +5,22 @@
 }
 
 .App {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 100vh; */
 
   /* ⚪️ 밑에 내코드 */
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   height: 100vh;
-  text-align: center; */
+  text-align: center;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
-/* .center {
+.center {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -36,12 +37,41 @@
 }
 
 button {
-  padding: 10px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
   font-size: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.replay {
+  transition: all ease-in-out 200ms;
+}
+
+.replay:hover {
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  box-shadow: 1px 1px 10px #222;
+  color: #555;
+}
+
+.이겼습니다 {
+  box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px blue;
+}
+
+.졌습니다 {
+  opacity: 0.5;
+}
+
+/* .무승부 {
+  
 } */
 
 /* ⚪ */
-.box-list {
+/* .box-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -96,4 +126,4 @@ button:last-child {
 .tie {
   border: 5px solid black;
   color: black;
-}
+} */
